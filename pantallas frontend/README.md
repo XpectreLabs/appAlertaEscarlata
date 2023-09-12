@@ -1,0 +1,1 @@
+Los botones debe ser redondeados
