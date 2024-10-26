@@ -13,14 +13,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-export const description =
-  "A login page with two columns. The first column has the login form with email and password. There's a Forgot your passwork link and a link to sign up if you do not have an account. The second column has a cover image.";
-
-export const iframeHeight = "800px";
-
-export const containerClassName = "w-full h-full p-4 lg:p-0";
-
-export default function Dashboard() {
+export default function RegisterForm() {
   return (
     <div className="w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px] bg-XpectreLightRose">
       <div>
@@ -63,7 +56,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="flex-1">
-                <Label htmlFor="email"></Label>
+                <Label htmlFor="email">Telefono</Label>
                 <Input
                   id="email"
                   type="email"
@@ -83,19 +76,19 @@ export default function Dashboard() {
                 </div>
                 <Input id="password" type="password" required />
               </div>
-              <Button type="submit" variant="XpectreBtnGray" className="w-full">
-                <Link href="/dashboard" className="w-full">
-                  Iniciar sesión
+              <Button type="submit" variant="XpectreBtnRed" className="w-full">
+                <Link href="/dashboard/auth/login" className="w-full">
+                    Registrarse
                 </Link>
               </Button>
             </div>
             <div className="mt-4 m-8 text-center text-sm">
-              ¿No tienes una cuenta?{" "}
+              ¿Ya tienes una cuenta?{" "}
               <Link
-                href="/dashboard/register"
+                href="/dashboard/auth/login"
                 className={buttonVariants({ variant: "link" })}
               >
-                Regístrate
+                Iniciar Sesión
               </Link>
             </div>
           </CardContent>
