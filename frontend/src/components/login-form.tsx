@@ -38,7 +38,7 @@ export function LoginForm() {
                 <div className="flex items-center">
                   <Label htmlFor="password">Contraseña</Label>
                   <Link
-                    href="#"
+                    href="/dashboard/auth/forget-password"
                     className="ml-auto inline-block text-sm underline"
                   >
                     ¿Olvidaste tu contraseña?
