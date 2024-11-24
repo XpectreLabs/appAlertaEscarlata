@@ -1,22 +1,22 @@
-import Link from "next/link"
+import Link from "next/link";
 import Image from "next/image";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 export function LoginForm() {
   return (
     <div className="w-full lg:grid lg:min-h-[600px] lg:grid-cols-2 xl:min-h-[800px] bg-XpectreLightRose">
       <div className="flex items-center justify-center card-transition">
-      <Card className="mx-auto max-w-sm">
+        <Card className="mx-auto max-w-sm">
           <CardHeader>
             <CardTitle className="text-2xl">Iniciar Sesión</CardTitle>
             <CardDescription>
@@ -46,8 +46,8 @@ export function LoginForm() {
                 </div>
                 <Input id="password" type="password" required />
               </div>
-              <Button type="submit" variant='XpectreBtnRed' className="w-full">
-                Iniciar Sesión
+              <Button type="submit" variant="XpectreBtnRed" className="w-full">
+                <Link href="./dashboard">Iniciar Sesión</Link>
               </Button>
               <Button variant="shinedark" className="w-full">
                 Iniciar Sesión con Google
@@ -72,5 +72,5 @@ export function LoginForm() {
         />
       </div>
     </div>
-  )
+  );
 }
